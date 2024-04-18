@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_login.css') }}">
+    <title>Login Form</title>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Login Form</h2>
+
+        <div class="login_register">
+            <a href="/login" class="login" target="blank">Login</a>
+            <a href="/signup" class="register" target="blank">Signup</a>
+        </div>
+
+        <form class="form" method="POST" action="/login">
+            <input type="email" placeholder="Email Address" class="email" name="email">
+            <input type="password" placeholder="Password" class="pass" name="password">
+            <button type="submit" class="login_btn">Login</button>
+        </form>
+
+        <a href="#" class="fp">Forgot password?</a>
+
+        <div class="footer_card">
+            <p>Not a member?</p>
+            <a href="/signup">Signup now</a>
+        </div>
+    </div>
+            
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Workshop</title>
+  <style>
+  /* Fonts Family */
+:root {
+  --fontDS: 'Dancing Script', cursive;
+  --fontMT: 'Montserrat', sans-serif;
+  --fontMW: 'Merriweather', serif;
+}
+
+/* COLORS */
+:root {
+  --purple: #800080;
+  --pink: #FF69B4;
+  --bgnd: #2B2B2B;
+  --hero-bg-image: url("static/4.jpg");
+  --her-bg-image: url("static/4.jpg") /* Add your hero background image path */
+}
+
+
+    /* BASE */
+    * {
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+      transition: all .3s ease;
+    }
+
+    body {
+      font-family: var(--fontMW);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+      
+    .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.image {
+    max-width: 100px;
+    height: auto;
+}
+
+.top-left {
+    margin-right: 100px; /* Adjust the margin as needed */
+}
+
+.top-center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.top-right {
+    margin-left: 100px; /* Adjust the margin as needed */
+}
+
+h1 {
+    margin: 0;
+}
+
+    /* HEADER */
+    .hero {
+  text-align: center;
+  position: relative;
+  height: auto;
+  background-image: var(--hero-bg-image); /* Use the variable here */
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  padding-bottom: 80px;
+  background-color: var(--bgnd); /* Use the variable for background color */
+  color: #fff;
+  overflow: hidden;
+}
+
+
+    .hero h1 {
+      margin: 50px 0 20px;
+      font-family: var(--fontMT);
+      background-image: var(--hero1-bg-image); /* Use the variable here */
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+      font-size: 35px;
+    }
+
+    .hero h1 span {
+      font: 700 60px/1 var(--fontDS);
+      display: block;
+    }
+
+    .hero h2 {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1em;
+      font-weight: 400;
+      padding: 20px;
+    }
+
+    @media only screen and (min-width: 37.5em) {
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .hero h1 span {
+        font-size: 76px;
+      }
+
+      .hero h2 {
+        width: 76%;
+        font-size: 18px;
+      }
+    }
+
+    /* WRAPPER */
+    .wrapper {
+      margin: 0 auto;
+      width: 96%;
+      max-width: 1120px;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 60px 0;
+    }
+
+    .section__title {
+      font-size: 24px;
+      color: purple;
+      text-align: center;
+      font-family: var(--fontMT);
+      margin: 14px 0;
+    }
+
+    .section__intro {
+      display: block;
+      text-align: center;
+      margin: 0 5% 30px;
+    }
+
+    @media only screen and (min-width: 43.75em) {
+      .section__intro {
+        margin-left: 15%;
+        margin-right: 15%;
+      }
+    }
+
+    .show-more-toggle {
+    display: none;
+}
+
+.more-content {
+    display: none;
+}
+
+.show-more-toggle:checked ~ .more-content {
+    display: inline;
+}
+
+.show-more-toggle:checked ~ .box__more {
+    display: none;
+}
+
+
+    .section--cta {
+      color: #454545;
+      background: #f1f1f1;
+    }
+
+    /* BOX ICONS */
+    .box {
+      display: flex;
+      flex: 1 0 100%;
+      margin-bottom: 20px;
+      background: #f9f9f9;
+    }
+
+    .box__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Align the items horizontally in the center */
+  align-items: center; /* Align the items vertically in the center */
+}
+
+    .box__title {
+      font-family: var(--fontMT);
+    }
+
+    .box__more {
+      color: pink;
+    }
+
+    .box__content {
+      color: #454545;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .box__content > i {
+      color: purple;
+    }
+
+    .box__content:hover .box__more {
+      color: darken(pink, 5%);
+    }
+
+    .box__content:hover i {
+      padding-left: 4px;
+      transition: all .2s ease-in-out;
+    }
+
+    @media only screen and (min-width: 43.75em) {
+      .box {
+        flex: 0 0 30%;
+      }
+    }
+
+    /* BUTTON */
+    .btn {
+      color: #fff;
+      font-family: var(--fontMT);
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      max-width: 300px;
+      padding: 12px 18px;
+      border-radius: 100px;
+      background: pink;
+    }
+
+    .btn:hover {
+      background: darken(pink, 5%);
+    }
+
+    /* Footer */
+    .footer {
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      background: var(--bgnd);
+    }
+
+    .footer p {
+      opacity: .65;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <!-- HEADER -->
+    <!-- HAMBURGER MENU -->
+    <!-- FORM CONTACT -->
+    <!-- Workshop header with images -->
+<div class="header">
+    <img src="static/IUCEE.png" alt="Logo 1" class="image top-left">
+    <img src="static/2.png" alt="Logo 2" class="image top-center">
+    <img src="static/3.png" alt="Logo 3" class="image top-right">
+</div>
+
+    <h1>
+      <span>_____</span>
+      CYBER SECURITY
+    </h1>
+    <h2>
+      THE CONTENT OVER THE WEBSITE IS DIGITALLY SECURED AND WILL SELF DESTRUCT AFTER SPECIFIED TIMELINES
+    </h2>
+  </section>
+
+  <!-- Section -->
+  <section class="section">
+    <div class="wrapper">
+      <h2 class="section__title">SOME TITLE</h2>
+      <p class="section__intro">
+        paragraph
+      </p>
+
+      <div class="box__grid">
+        <!-- Repeat this block for each box -->
+        
+        <!-- BOX 1 -->
+        <article class="box">
+          <div class="box__content">
+            <i class="fa fa-mobile fa-3x"></i>
+            <h3 class="box__title">Restrictions</h3>
+            <p>Mobile Phone and Smart gadgets of any form are not permitted<input type="checkbox" id="show-more" class="show-more-toggle">
+            <span class="more-content">
+              , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers.
+            </span></p>
+            <label for="show-more" class="box__more">Read more <i class="fa fa-arrow-right"></i></label>
+          </div>
+        </article>
+
+        <article class="box">
+          <div class="box__content">
+            <i class="fa fa-mobile fa-3x"></i>
+            <h3 class="box__title">Restrictions</h3>
+            <p>Mobile Phone and Smart gadgets of any form are not permitted<input type="checkbox" id="show-more" class="show-more-toggle">
+              <input type="checkbox" id="show-more-2" class="show-more-toggle">
+              <span class="more-content">
+              , except for special circumstances wherMobile Phone and Smart gadgets of any form are not permittedMobile Phone and Smart gadgets of any form are not permittedMobile Phone and Smart gadgets of any form are not permittedMobile Phone and Smart gadgets of any form are not permittedMobile Phone and Smart gadgets of any form are not permittede prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers.
+            </span></p>
+           
+            <label for="show-more-2" class="box__more">Read more <i class="fa fa-arrow-right"></i></label>
+          </div>
+        </article>
+
+        <article class="box">
+          <div class="box__content">
+            <i class="fa fa-mobile fa-3x"></i>
+            <h3 class="box__title">Restrictions</h3>
+            <p>Mobile Phone and Smart gadgets of any form are not permitted<input type="checkbox" id="show-more" class="show-more-toggle">
+            <span class="more-content">
+              , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers.
+            </span></p>
+            <label for="show-more" class="box__more">Read more <i class="fa fa-arrow-right"></i></label>
+          </div>
+        </article>
+
+        <article class="box">
+          <div class="box__content">
+            <i class="fa fa-mobile fa-3x"></i>
+            <h3 class="box__title">Restrictions</h3>
+            <p>Mobile Phone and Smart gadgets of any form are not permitted<input type="checkbox" id="show-more" class="show-more-toggle">
+            <span class="more-content">
+              , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers.
+            </span></p>
+            <label for="show-more" class="box__more">Read more <i class="fa fa-arrow-right"></i></label>
+          </div>
+        </article>
+
+        <article class="box">
+          <div class="box__content">
+            <i class="fa fa-mobile fa-3x"></i>
+            <h3 class="box__title">Restrictions</h3>
+            <p>Mobile Phone and Smart gadgets of any form are not permitted<input type="checkbox" id="show-more" class="show-more-toggle">
+            <span class="more-content">
+              , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers.
+            </span></p>
+            <label for="show-more" class="box__more">Read more <i class="fa fa-arrow-right"></i></label>
+          </div>
+        </article>
+
+        <article class="box">
+          <div class="box__content">
+            <i class="fa fa-mobile fa-3x"></i>
+            <h3 class="box__title">Restrictions</h3>
+            <p>Mobile Phone and Smart gadgets of any form are not permitted<input type="checkbox" id="show-more" class="show-more-toggle">
+            <span class="more-content">
+              , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers. , except for special circumstances where prior approval has been granted by the workshop organizers.
+            </span></p>
+            <label for="show-more" class="box__more">Read more <i class="fa fa-arrow-right"></i></label>
+          </div>
+        </article>
+        
+        <!-- Repeat the above block eight more times to create 9 boxes in total -->
+      
+      </div>
+        </article>
+        
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- TO DO SECTION CONTACT -->
+  <section class="section section--cta">
+    <div class="wrapper">
+      <h2 class="section__title">__TITLE__</h2>
+      <p class="section__intro paragraph">
+              paragraph
+            </p>
+            <a href="{{ url_for('login') }}" class="btn">LOGIN</a>
+            <a href="{{ url_for('signup') }}" class="btn">SIGN UP</a>
+          </div>
+        </section>
+      
+        <!-- Footer -->
+        <footer class="footer">
+          <p>Thank you &copy; IUCEESTUDENTCHAPTER@ATRIA.I.T </p>
+        </footer>
+      </body>
+      </html>

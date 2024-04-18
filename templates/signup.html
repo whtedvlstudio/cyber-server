@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_signup.css') }}">
+    <title>Signup Form</title>
+</head>
+<body>
+
+    <!-- FORMULAIRE DE CONNEXION -->
+    <div class="card">
+        <h2>Signup Form</h2>
+
+        <!-- SE CONNECTER / S'INSCRIRE -->
+        <div class="login_register">
+            <a href="/login" class="login" target="blank">Login</a>
+            <a href="/signup" class="register" target="blank">Signup</a>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <form class="form" method="POST" action="/signup">
+            <input type="email" placeholder="Email Address" class="email" id="email" name="email">
+            <input type="password" placeholder="Password" class="pass" id="password" name="password">
+            <input type="password" placeholder="Confirm Password" class="confirm_pass" id="confirm_password" name="confirm_password">
+            <button type="submit" class="login_btn">Sign up</button>
+        </form>
+
+        <!-- MOT DE PASSE OUBLIE ? -->
+        <a href="#" class="fp">Forgot password?</a>
+
+    </div>
+        
+</body>
+</html>
